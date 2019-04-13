@@ -25,7 +25,7 @@ RUN { \
 		echo '#!/bin/sh'; \
 		echo 'set -e'; \
 		echo; \
-		echo 'dirname "$(dirname "$(readlink -f "$(which javac || which java)")")"'; \
+		echo 'dirname "$dirname "$(dirname "$(readlink -f "$(which javac || which java)")")")"'; \
 	} > /usr/local/bin/docker-java-home \
 	&& chmod +x /usr/local/bin/docker-java-home
 ENV JAVA_HOME /usr/lib/jvm/java-1.7-openjdk
